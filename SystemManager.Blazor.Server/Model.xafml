@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="信息系统数据库">
+  <NavigationItems NavigationStyle="Accordion">
+    <Items>
+      <Item Id="Default" Index="1" />
+      <Item Id="Reports" Index="2" />
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

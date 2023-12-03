@@ -54,8 +54,7 @@ public sealed class BOSModule : ModuleBase
     public override void ExtendModelInterfaces(ModelInterfaceExtenders extenders)
     {
         base.ExtendModelInterfaces(extenders);
-        extenders.Add<IModelMember, ModelUpdaters.IAppendFormat>();
-        extenders.Add<IModelMember, ModelUpdaters.INullText>();
+        extenders.Add<IModelMember, ModelUpdaters.IAppendFormat>();        
         extenders.Add<IModelListView, ModelUpdaters.IMultiSelect>();
         extenders.Add<IModelColumn, ModelUpdaters.IShowInCardView>();
     }

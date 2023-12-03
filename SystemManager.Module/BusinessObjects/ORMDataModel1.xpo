@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5f75866d-6e8f-4060-ba95-138a87ab69ce" namespace="SystemManager.Module.BusinessObjects.ora55" dataBaseShemaInfo="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" generateConnectionHelper="true" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" connectionStringName="ora55" createdInVersion="22.2.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="true" lastModifiedInVersion="22.2.4.0" name="ora55" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="077c47f7-cdc3-4901-b941-3a3b40db0232">
+      <xpObject Id="e0eca577-ced7-430d-8918-9c4463f41be0" name="职工" baseClass="XPObject" userFileName="职工" designerFileName="职工.Designer" className="职工" virtualName="职工">
+        <fields>
+          <generalXpObjectHasFields Id="8f6fad08-22df-4592-80eb-7ade3860c00d">
+            <field Id="d8ebf0b6-027f-4f34-b91f-bedb68b911f6" name="姓名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="9b18ffd7-1c2d-46db-9669-343c3a147819">
+      <xpObject Id="136fbe42-9d7c-4c6d-8d49-200db5aa84fa" name="厂商员工" baseClass="XPObject" userFileName="厂商员工" designerFileName="厂商员工.Designer" className="厂商员工" virtualName="厂商员工">
+        <fields>
+          <generalXpObjectHasFields Id="b137aaf9-a5b1-4773-8a17-9713cc56f621">
+            <field Id="4e37b8bc-6f81-4f8d-8e37-ea02a7293020" name="姓名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7d39a407-7cc0-4563-a31b-f4232baae571">
+            <field Id="bbdc82fa-6bd6-40a1-b619-650cb379cba2" name="公司" virtualColumnType="公司" logicalType="公司" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="374c28b9-dba5-4446-aae5-22c7f066b9b8">
+            <field Id="c6fabede-cfc0-4e42-86b0-d410a2054676" name="职位" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b4b4cd75-7cd7-4078-9153-00f9d191ee3d">
+            <field Id="f99473f6-400a-469f-9f32-851e44700a7d" name="所在城市" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="24a473c0-3ff1-4dfe-88c0-4f2e8e97c6a5">
+            <field Id="8d0a03ce-ce9f-4e94-9db7-738a0a424252" name="电话" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="82faa46f-ff3b-4cc0-9c61-fcc265bf8368">
+            <field Id="1c14c8d9-6ebd-4ac9-be81-9529236c6bd3" name="是否在省医院驻场" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="2709166c-3cec-4f62-aa06-8cc76977a11a">
+      <xpObject Id="415569b6-db89-4b22-8650-1f9e276f2400" name="字典" baseClass="XPObject" userFileName="字典" designerFileName="字典.Designer" className="字典" virtualName="字典">
+        <fields>
+          <generalXpObjectHasFields Id="1526158a-40f3-43a5-921c-4133cecd877d">
+            <field Id="309bfa5e-0b95-4221-bd34-81d488b39a40" name="名称" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f978d724-a5d6-4844-add0-643f223febf9">
+            <field Id="2f9b2cc8-e729-41d1-b1b9-c04677d27846" name="顺序" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="30d67c0e-b4c0-4821-9f53-450ad7099e80">
+            <field Id="0a666a4c-ec45-4ef9-b026-3b68d995093d" name="编码" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="ee426630-0acf-473d-983c-5cb9dc0e5ca3">
+      <xpObject Id="141b655c-78b4-42fb-b8c9-318ecd4a840a" name="系统" baseClass="XPObject" userFileName="系统" designerFileName="系统.Designer" className="系统" virtualName="系统">
+        <fields>
+          <generalXpObjectHasFields Id="8ff6617e-123d-49e4-8f49-fd64f95b1b6d">
+            <field Id="2f5d0434-35da-4d5a-80b0-82e201914a82" name="系统名称" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a8df18ea-cb0c-473d-8db5-90df43335f95">
+            <field Id="cdab2417-fa70-447b-8b32-03946c82b4b7" name="信息中心对接人" virtualColumnType="职工" logicalType="职工" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="23f9af7b-97d1-474c-bb4d-d2da9d7df6b3">
+            <field Id="f80395a1-a6bf-487e-9df0-ffed259ef55d" name="公司" virtualColumnType="公司" logicalType="公司" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="25e4692c-6433-4321-801c-e40299ef35bf">
+            <field Id="27a8d181-5865-4fa8-b161-ba589f287224" name="上线时间" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e85bf267-6764-45d6-bc7f-917ce43bff41">
+            <field Id="6cea23fe-58cc-41a5-916d-eb9c2358b244" name="功能简介" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7ff90bb7-5a38-45d9-8292-1b178eb274e0">
+            <field Id="f5643200-b76a-4f61-b8f2-eaf501ce70b1" name="管理员用户" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c5126b4c-49f0-4f57-93ee-adbc3d397ea9">
+            <field Id="ef859637-c13d-46f5-a0bf-05636878c45a" name="管理员密码" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c00193de-5c29-4542-bbeb-7dfdc527b3a1">
+            <field Id="0be5aea3-378f-4d80-97bb-2f543e149897" name="客户端进程名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a24eb030-2c8c-49a1-a7e9-8f0669c37cfb">
+            <field Id="7e0da890-1027-45cc-892b-150473188b8c" name="链接" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="800" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1e71dedf-9d01-46b6-843e-0e90b46ca2b4">
+            <field Id="08342926-0e58-43e6-965e-499e80cb1b09" name="是否有合同" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="64e855c1-11de-471d-a00a-ec3f94742d65">
+            <field Id="76ea4ab4-4006-4bf5-b8be-4ad4c900d9db" name="购买金额" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6b9637b7-fe1c-464d-94dc-3259a71eee2a">
+            <field Id="9a554854-a984-43a0-aabc-4d0f200fc73d" name="维保金额" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dc7c8ff8-1b5d-42a0-b167-b583338a4856">
+            <field Id="d9eedd89-efae-476f-81e1-49ce3ea346f2" name="合同已过期" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ec950a1c-ab72-4fc0-ab9c-e1f8498af631">
+            <field Id="26f84a97-8c02-4a72-b405-0a7d96703ee3" name="实现单点登录" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1870da08-44c2-4353-92db-f0754bef291a">
+            <field Id="369524bc-28bc-4322-b28b-f79c5a330024" name="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="800" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9cb7ce93-042a-4381-b51e-3add199d85d1">
+            <field Id="7f3ebde3-2cbc-41ff-ae71-86393ffd8deb" name="核验人" virtualColumnType="职工" logicalType="职工" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2d5d97f1-fd7e-4428-ab6f-48733ce1c422">
+            <field Id="1550859c-0f7e-4420-b07c-fe68cfb8bf69" name="已核验" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1615eb7a-3522-42f3-bb3c-c314989597c2">
+            <field Id="2484503d-6ef3-40ae-8fd7-a9b021517224" name="类型1" virtualColumnType="EType1" logicalType="EType1" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6fc31e63-87a6-4e1e-beb6-f94e1efccfe2">
+            <field Id="5ad69e67-43f1-4e84-bf02-b70ab1d96772" name="巡检间隔天数" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f8c3e2de-43da-4058-8d0d-d961a995f6ed">
+            <field Id="15528c7b-4105-421b-a658-7c764a20dce8" name="网络运行环境" virtualColumnType="E网络运行环境" logicalType="E网络运行环境" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <aggrTarget>
+          <aggregation Id="fb6878d5-095d-4293-8ef7-e09921af67f8" sourceCollectionName="巡检s" name="巡检References系统" targetFieldName="系统">
+            <xpObjectMoniker Id="19de1e6b-7245-4bb0-82c7-d7ff6de059cc" />
+          </aggregation>
+          <aggregation Id="0a6a7fa1-e46d-4dfc-b2e0-f79e72633909" sourceCollectionName="系统付费s" name="系统付费References系统" targetFieldName="系统">
+            <xpObjectMoniker Id="d18467f7-ebfd-4a9d-b2fc-9643b64931dd" />
+          </aggregation>
+        </aggrTarget>
+        <mMTarget>
+          <manyToManyRelationship Id="263a7889-485a-4de8-81f7-86755191a5bb" sourceCollectionName="服务器s" name="服务器References系统" targetCollectionName="系统s">
+            <xpObjectMoniker Id="65162849-e6ef-4a8c-bb6b-bf30cccdded6" />
+          </manyToManyRelationship>
+          <manyToManyRelationship Id="c8c8253d-8604-49d1-ab03-3e1f33bf7ee7" sourceCollectionName="部门s" name="部门References系统" targetCollectionName="系统s">
+            <xpObjectMoniker Id="5a7c6f6b-06f6-43d5-a311-8c1bce49af39" />
+          </manyToManyRelationship>
+        </mMTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="89882493-0a2f-4cdb-8609-e2a015ecd011">
+            <collectionField Id="78cb4a31-7ae4-4762-b791-31fec20b93db" name="服务器s" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="58290473-e35c-486f-b87a-ac3973bbe66b">
+            <collectionField Id="c5273f1f-0331-4721-9f53-df13bbf256f3" name="部门s" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="1d07a041-0687-44ab-bbc6-6bfefdf47423">
+            <collectionField Id="6c94b417-87eb-42dd-a187-3c6890ba9d4d" name="巡检s" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="af739546-a7de-4626-a3d2-7f005467a124">
+            <collectionField Id="7a473630-60ef-40cf-be1d-78bf19091d7c" name="系统付费s" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="4d2f21c5-e6a7-4ccf-afa2-836ca63f8716">
+      <xpObject Id="e88debf6-aca6-43b2-bec2-bc20ef8b6f57" name="公司" baseClass="XPObject" userFileName="公司" designerFileName="公司.Designer" className="公司" virtualName="公司">
+        <fields>
+          <generalXpObjectHasFields Id="f14d7845-1ec6-4255-a436-90bb6fa114e2">
+            <field Id="322ef231-96cb-4e7e-941a-0332a58375d0" name="简称" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8a1314fe-803f-46cb-a39e-40a821c3ad57">
+            <field Id="5a98087e-bb5d-4e79-a3e4-eed715066df5" name="全称" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5182d986-53f7-443c-9568-183c2b54bf00">
+            <field Id="996a677f-38da-4a81-b61d-5b224bd53a5e" name="总部所在城市" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6795bacc-aa94-4ee2-8534-17a8cbb5b070">
+            <field Id="e35dfaf5-9c77-4fb0-91d0-bff3c6b1ba86" name="登陆名称" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="40" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="97c2a787-9e22-4b3d-8d43-ef6d5ad1f290">
+            <field Id="9071fd34-ca7c-4727-bc01-0ed5549d614c" name="核验人" virtualColumnType="职工" logicalType="职工" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="73e6ac82-ba74-484e-9610-5f85f0474ae0">
+            <field Id="65c75c3d-49d9-4bf2-947f-a72fb8b7b1b9" name="已核验" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="24f53494-0c9d-49f4-820f-0921075ce241">
+            <field Id="09466ab4-cffd-49ef-acd7-2e0b1b825b77" name="注册资本" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="973f4672-6ae9-43ba-9c5b-ccba806eaa16">
+            <field Id="2e7a7d43-fc34-41df-b42c-08fc06ecc33d" name="数据治理大会2023问题" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1f6809ff-8173-43bf-858d-90757689bdb3">
+            <field Id="1311856d-113b-497f-a210-60f4e03bd6d8" name="数据治理大会2023案例" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
+          </generalXpObjectHasFields>
+        </fields>
+        <aggrTarget>
+          <aggregation Id="188386b2-cca3-42da-8b70-f7185ab96fcc" sourceCollectionName="厂商员工s" name="厂商员工References公司" targetFieldName="公司">
+            <xpObjectMoniker Id="136fbe42-9d7c-4c6d-8d49-200db5aa84fa" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="cc4fe24a-c49d-4735-a779-c274e2148583">
+            <collectionField Id="ecbd6ee0-52a5-417d-9a55-56b1d1adca17" name="厂商员工s" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="eefe86ca-c737-4a5b-ac0f-7cabd187e135">
+      <xpObject Id="5a7c6f6b-06f6-43d5-a311-8c1bce49af39" name="部门" baseClass="字典" userFileName="部门" designerFileName="部门.Designer" className="部门" virtualBaseClass="字典" mapInheritance="ParentTable" virtualName="部门">
+        <superClass>
+          <inheritance Id="a67a5b85-0e93-4ce5-967d-99474dfb323b">
+            <xpObjectMoniker Id="415569b6-db89-4b22-8650-1f9e276f2400" />
+          </inheritance>
+        </superClass>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="6bad15dd-4b5c-448c-abca-95ccfb081d69">
+            <collectionField Id="5cac146e-737a-4a0f-80a6-298ae3cf2e5f" name="系统s" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="c7db2e3e-808d-43f8-94fb-49c7f7b87009">
+      <xpObject Id="65162849-e6ef-4a8c-bb6b-bf30cccdded6" name="服务器" baseClass="XPObject" userFileName="服务器" designerFileName="服务器.Designer" className="服务器" virtualName="服务器">
+        <fields>
+          <generalXpObjectHasFields Id="26c5bde6-f0a2-4b66-af29-b2e7fc110a5e">
+            <field Id="844f8184-3105-43f2-898f-a3de928dada4" name="IP地址" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="15" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="49d5fd34-2393-43a1-b941-13e8dff515e2">
+            <field Id="3b1bbed6-cbff-4854-be74-413060f7c0ab" name="服务器名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7c76ab7f-2f37-474d-b062-e5d41926b443">
+            <field Id="7c8301aa-7f0d-4250-b84c-ad0f439097bd" name="服务器用户名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1d93a94b-00ea-47c7-b40c-b4fd96774857">
+            <field Id="789fe06b-77b6-41bb-aeee-b97bdd261750" name="服务器密码" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4f72ad4d-348f-43f8-9e3b-3f4f8052b636">
+            <field Id="2eb78d7e-08a0-400e-b182-be521a2b1af2" name="服务器进程名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a0f8d850-3155-4f97-b5ea-917d4e253dbb">
+            <field Id="be5a2abb-4494-4df5-b04d-5a2b390f9e4b" name="服务器进程端口" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="5" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4163409b-f542-4fe7-979f-4596b1f3a7b1">
+            <field Id="5f61be11-57bf-4017-ba8c-a0a832d34030" name="操作系统" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3acbfcb6-1e4a-41f1-8209-45660b2d265b">
+            <field Id="ef334e3b-856a-4bdf-a422-efa0a74d6939" name="数据库名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="76ceee25-06ea-467e-b309-1545d9172a24">
+            <field Id="d0b6021a-9ff5-419c-8209-061546dcbb84" name="数据库用户名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4e0d0c69-4ec7-429a-bad5-0ca76136e045">
+            <field Id="614c94f1-b2f3-4b90-8aff-6958c5d1cc99" name="数据库密码" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="399302f9-12b2-4cc7-90e6-f420ebbf56ad">
+            <field Id="08a2b00b-564b-4a8f-860a-0b2d02ff0414" name="上级服务器" virtualColumnType="服务器" logicalType="服务器" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1324e9ea-c1de-466a-ba7f-63d658427e87">
+            <field Id="edba37d2-d9ca-4f91-931d-561af68f3a04" name="说明" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bd93c51a-6082-4b0e-88ef-e162c8bebe21">
+            <field Id="cc018e60-9628-47c2-a595-f4f85d3735f7" name="资源增量2024" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+          </generalXpObjectHasFields>
+        </fields>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="a157d5e8-51ee-4e52-a868-45c3dea98af6">
+            <collectionField Id="50f0a8eb-8136-49f8-838d-2f9803a5654c" name="系统s" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="1f6fbf80-a98c-49e1-b439-e13c4b5b2509">
+      <xpObject Id="19de1e6b-7245-4bb0-82c7-d7ff6de059cc" name="巡检" baseClass="XPObject" userFileName="巡检" designerFileName="巡检.Designer" className="巡检" virtualName="巡检">
+        <fields>
+          <generalXpObjectHasFields Id="38c91b18-017c-453a-ab7b-e16eba88b31a">
+            <field Id="6dda5f09-ce95-45d4-9f3e-7d8a03b147ec" name="系统" virtualColumnType="系统" logicalType="系统" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6b467a3d-7bb6-47d9-abbb-a417d5e1f7bf">
+            <field Id="60c1cf36-d4c7-4993-be51-ce37891ec3db" name="巡检时间" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d6942b87-2fc5-46ec-9db3-f3939c9fbe22">
+            <field Id="e930f5e3-6110-4a5c-89fa-932c6772b1d6" name="巡检人" virtualColumnType="厂商员工" logicalType="厂商员工" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="affb4b32-5622-4d14-8416-710778fd21a5">
+            <field Id="b8bb8505-7517-4abc-a61e-41697da17fbd" name="信息中心已核验" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <aggrTarget>
+          <aggregation Id="354447f8-48fe-480f-8a3c-6c649cf555fa" sourceCollectionName="巡检凭证s" name="巡检凭证References巡检" targetFieldName="巡检">
+            <xpObjectMoniker Id="ab5b475b-e5b9-4255-b368-7371e425296d" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="dac84086-9714-435f-9fed-ce97f56f0fab">
+            <collectionField Id="73fb32c0-7ea6-4a81-969b-33d8eb70a12b" name="巡检凭证s" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="25dc938d-2293-410a-bc0c-c15826916763">
+      <xpObject Id="ab5b475b-e5b9-4255-b368-7371e425296d" name="巡检凭证" baseClass="XPObject" userFileName="巡检凭证" designerFileName="巡检凭证.Designer" className="巡检凭证" virtualName="巡检凭证">
+        <fields>
+          <generalXpObjectHasFields Id="226389b4-161a-4902-a96c-c72505d4a1a0">
+            <field Id="405e2191-a81c-4480-bfea-b72684adc47a" name="巡检" virtualColumnType="巡检" logicalType="巡检" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="23f3febf-f8fc-457e-85e2-8038d00064f0">
+            <field Id="00e0a002-68b9-42b1-8660-edd2b90356ed" name="图片" columnType="ByteArray" virtualColumnType="DevExpress.Persistent.BaseImpl.FileData" logicalType="DevExpress.Persistent.BaseImpl.FileData" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.ExpandObjectMembers(DevExpress.Persistent.Base.ExpandObjectMembers.Never)" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="8c7564ca-c257-4f1d-a204-fdf5e7242feb">
+      <externalPersistentType Id="bd818be4-a72e-4fa3-ae11-83413db00aea" name="DevExpress.Persistent.BaseImpl.FileData" nameSpace="DevExpress.Persistent.BaseImpl" virtualName="FileData" assemblyName="C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Persistent.BaseImpl.Xpo.v22.2\v4.0_22.2.4.0__b88d1754d700e49a\DevExpress.Persistent.BaseImpl.Xpo.v22.2.dll" deferredDeletion="False" optimisticLocking="False" hasDefaultConstructor="false" constructorParameterType="Session" hasSessionSpecifiedConstructor="false">
+        <fields>
+          <generalXpObjectHasFields Id="706b0c94-b994-4ad4-a681-42a875dee71b">
+            <externalPersistentTypeField Id="31b68769-6767-4642-a647-de035e272864" name="oid" virtualColumnType="Guid" key="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="52ca6c69-9653-4a77-a31f-fc1f8e579537">
+            <externalPersistentTypeField Id="6f9f8073-0d93-47d0-b950-67fb24b2fd83" name="size" virtualColumnType="Int32" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e4cbe677-b377-4a5c-830c-adb762a1a3e6">
+            <externalPersistentTypeField Id="89417455-6635-44ea-9b63-72b38786d1b0" name="FileName" virtualColumnType="String" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0b9270ff-1237-4d2a-a936-03f64032958e">
+            <externalPersistentTypeField Id="35c01f04-f0ec-485f-bffe-a8ce7f660f79" name="Content" virtualColumnType="Byte[]" />
+          </generalXpObjectHasFields>
+        </fields>
+      </externalPersistentType>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e9622186-9e6a-4f5c-bbbf-8b8b06f16fb4">
+      <xpObject Id="d18467f7-ebfd-4a9d-b2fc-9643b64931dd" name="系统付费" baseClass="XPObject" userFileName="系统付费" designerFileName="系统付费.Designer" className="系统付费" virtualName="系统付费">
+        <fields>
+          <generalXpObjectHasFields Id="37408878-d264-43ac-a83e-a629df8f55aa">
+            <field Id="e82fd1dd-db61-4306-826d-213862327346" name="系统" virtualColumnType="系统" logicalType="系统" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="690797b4-d67f-4b7d-8222-dcf7a866d621">
+            <field Id="9fc43a2a-68c7-44ba-8fae-d6c39b3b9b14" name="费用" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a4f06fed-b447-4cc1-9c76-b81333001c31">
+            <field Id="207159eb-92a1-4872-997e-9decf0fcf964" name="类型" virtualColumnType="系统付费类型" logicalType="系统付费类型" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a6a9c01c-7111-48af-9f9d-230b1f2703f1">
+            <field Id="efd00bd1-80d7-4037-91df-4e8966ec3261" name="付费时间" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e1a6ad8a-6691-4f26-93b6-d73996553145">
+            <field Id="e9740188-d183-4460-9256-6ea2a197dfbb" name="合同编号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="30" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b26666d8-2731-4499-b0a8-43a665df2996">
+            <field Id="c73bcd86-0eb9-402f-a96b-e27107e860a1" name="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b6adc6bf-9421-4535-bcc2-42bf6d77d6b0">
+            <field Id="80be8c1e-0407-4152-946f-7992e6f2a802" name="项目名称" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e95ddc8b-03a7-47c8-8ac4-bc6eeb3eba5b">
+      <xpObject Id="32cddc00-01cf-44fa-a3a6-1fee164374d6" name="系统付费类型" baseClass="字典" userFileName="系统付费类型" designerFileName="系统付费类型.Designer" className="系统付费类型" virtualBaseClass="字典" mapInheritance="ParentTable" virtualName="系统付费类型">
+        <superClass>
+          <inheritance Id="45183358-72b9-437d-8dd8-5c0a51f43bcb">
+            <xpObjectMoniker Id="415569b6-db89-4b22-8650-1f9e276f2400" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e8e83f29-d36e-45b3-af4c-fe366fd4a85d">
+      <xpObject Id="bab4dacb-e369-4b9c-8c28-b33ebc4c19b1" name="审计2023" baseClass="XPObject" userFileName="审计2023" designerFileName="审计2023.Designer" className="审计2023" virtualName="审计2023">
+        <fields>
+          <generalXpObjectHasFields Id="4e78ea26-954f-4916-a57b-c282983e5292">
+            <field Id="cfefc9ea-8483-4824-bccb-7fce00173a85" name="系统" virtualColumnType="系统" logicalType="系统" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="da1da9f3-6735-4a77-aa9c-9c6f9fe0b048">
+            <field Id="b5bde346-ac3a-43d4-9225-fdf90682bd68" name="A" columnType="Decimal" displayName="2022年运行维护费总投入金额（万元）" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="47e67e9a-1915-4fbb-8721-6e55aeb338fb">
+            <field Id="ce37a5f0-6b5a-4813-8e62-d231a17024b7" name="B" displayName="是否与运维单位专门签订安全保密协议" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="2" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fd68dc6c-448b-45c2-ba0d-2ee285c18bab">
+            <field Id="e7f9f0e8-ddf5-42cd-b11b-c2bd27580d35" name="C" columnType="Int32" displayName="运维人员人数" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="977401a5-3cc7-4b80-be75-47a11b48d0bd">
+            <field Id="7f7dfa7e-9bdb-4545-89b3-fb5c2787fda6" name="D" columnType="Int32" displayName="系统使用频率&#xA;（2022年度累计用户访问/登录次数）" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="59e5b7e4-c81f-4190-99cc-456193309f72">
+            <field Id="61e0dd95-e9ed-4164-a579-2d52fc8980c2" name="E" displayName="收集和存储数据主要内容（个人信息、商业数据、国家基础数据、其他请列明）" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="062a1f1d-303e-4db6-8cf2-f1411c324d31">
+            <field Id="6174a558-436d-4dba-8003-19977f1a0039" name="F" columnType="Double" displayName="数据存储量大小（GB）" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8a1a4562-ad1c-4033-84d9-801f9e409697">
+            <field Id="574bf505-db43-4a5d-88aa-39e4cd8e9456" name="G" columnType="Double" displayName="包含医患个人信息条数（万条）" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="071a56d4-5655-4e50-b847-05aa0fe77b92">
+            <field Id="b26bad9c-7c6e-4697-a1f5-3580bc8513f5" name="H" displayName="数据库品牌" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a655d147-e702-4a89-b6dd-aef6467e7f05">
+            <field Id="83d92cda-1807-4c03-b4c5-65610673ab1b" name="I" displayName="是否采购使用云服务" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="2" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="61f560f9-674c-4bc5-ad3e-ea34e2d9e854">
+            <field Id="28681549-58a5-4ccb-82a2-80780cf263ae" name="J" displayName="是否通过云计算服务安全评估（请填通过、未通过、未参加）" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="10" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e8b86858-df9a-4ffa-9451-f2dc4138317a">
+            <field Id="bc0090e7-8a94-4f53-b1b5-0bb5e143b445" name="K" displayName="云服务提供商名称（若没有请填写“无”）" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e12ef7db-31bf-4cef-a94f-cf27aeb58312">
+            <field Id="9744f54b-1177-44b4-b7ef-ed5a2f7dc368" name="L" displayName="云服务提供商性质&#xA;（党政机关、事业单位、国有企业、民营企业、外资企业、其他请列明）" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6ed111ad-e8c7-4b7a-b0a6-1e6fe5abb8b2">
+            <field Id="cf5aa7a5-3a30-4de7-9365-7de238fec0ff" name="M" displayName="信息系统等级保护定级情况&#xA;（一级、二级、三级、四级、五级、未定级）" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="12452351-156f-40a9-9052-7de9913a927d">
+            <field Id="74144702-fc09-4a6e-b0aa-e7530abe6402" name="N" columnType="Int32" displayName="2022年开展等级保护测评的次数" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c31ad92f-bc4e-4d3c-b5bd-fe98a328cf2f">
+            <field Id="76152f70-97be-4746-96ff-58e4fe95c4fb" name="O" displayName="容灾备份情况（数据灾备、系统灾备、数据灾备+系统灾备、无灾备）" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2c629f57-02ee-45a4-945c-e63b0abec9a0">
+            <field Id="6104ea5a-a52a-4871-b1b3-3b8e92d2c0a4" name="P" displayName="网络日志留存情况（格式：**个月，若未留存请填写“未留存”）" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+  <externalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="f4fd9220-01bd-41e8-8324-f85eca1b1e1d">
+      <externalType Id="a5ee8043-5d93-495c-a314-63a7c98e13a7" name="EType1" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="1c00e5d1-5356-4a50-986c-4d09b6d0ba52">
+      <externalType Id="ca4cc379-0aca-4be3-9b33-2bba29ad9487" name="E应用范围" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="7265ef59-ca68-495f-80e5-6b6f45ef8c81">
+      <externalType Id="83f295d7-b391-430f-8ad8-f33e065b1be9" name="E网络运行环境" />
+    </dataBaseObjectModelHasExternalTypes>
+  </externalTypes>
+</dataBaseObjectModel>

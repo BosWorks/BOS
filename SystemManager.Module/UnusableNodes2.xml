@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="系统_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="备注" Removed="True" />
+        <ColumnInfo Id="功能简介" Removed="True" />
+        <ColumnInfo Id="购买金额" Removed="True" />
+        <ColumnInfo Id="管理员密码" Removed="True" />
+        <ColumnInfo Id="管理员用户" Removed="True" />
+        <ColumnInfo Id="合同已过期" Removed="True" />
+        <ColumnInfo Id="核验人" Removed="True" />
+        <ColumnInfo Id="客户端进程名" Removed="True" />
+        <ColumnInfo Id="类型1" Removed="True" />
+        <ColumnInfo Id="链接" Removed="True" />
+        <ColumnInfo Id="实现单点登录" Removed="True" />
+        <ColumnInfo Id="是否有合同" Removed="True" />
+        <ColumnInfo Id="网络运行环境" Removed="True" />
+        <ColumnInfo Id="维保金额" Removed="True" />
+        <ColumnInfo Id="信息中心对接人" Removed="True" />
+        <ColumnInfo Id="巡检间隔天数" Removed="True" />
+        <ColumnInfo Id="已核验" Removed="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

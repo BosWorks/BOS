@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="SystemManager">
+  <BOModel>
+    <Class Name="SystemManager.Module.BusinessObjects.ora55.服务器">
+      <OwnMembers>
+        <Member Name="DefaultSys" Caption="系统" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SystemManager.Module.BusinessObjects.ora55.公司">
+      <AppearanceRules>
+        <AppearanceRule Id="核验人" Enabled="False" TargetItems="核验人" Criteria="!ISCURRENTUSERINROLE('Administrators')" IsNewNode="True" />
+        <AppearanceRule Id="已核验" TargetItems="已核验" Enabled="False" Criteria="!ISCURRENTUSERINROLE('Administrators')" IsNewNode="True" />
+      </AppearanceRules>
+      <OwnMembers>
+        <Member Name="登陆名称" AllowEdit="False" />
+        <Member Name="数据治理大会2023案例" NullText="输入案例，详细到具体的表、字段等，案例越详细越好" />
+        <Member Name="数据治理大会2023问题" NullText="遇到哪些数据相关问题（例如关键数据缺失、数据不准）？涉及到哪些系统？是不是工作人员输入不规范造成的？造成了什么不良影响？有什么建议吗？" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SystemManager.Module.BusinessObjects.ora55.审计2023">
+      <OwnMembers>
+        <Member Name="系统" DataSourceCriteria="[公司.登陆名称] = ToStr(CURRENTUSERID()) Or ISCURRENTUSERINROLE('Administrators') Or ISCURRENTUSERINROLE('Viewer')" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SystemManager.Module.BusinessObjects.ora55.系统">
+      <AppearanceRules>
+        <AppearanceRule Id="核验人" Criteria="!ISCURRENTUSERINROLE('Administrators')" TargetItems="核验人" Enabled="False" IsNewNode="True" />
+        <AppearanceRule Id="类型1" Criteria="!ISCURRENTUSERINROLE('Administrators')" TargetItems="类型1" Enabled="False" IsNewNode="True" />
+        <AppearanceRule Id="巡检间隔天数" Criteria="!ISCURRENTUSERINROLE('Administrators')" TargetItems="巡检间隔天数" Enabled="False" IsNewNode="True" />
+        <AppearanceRule Id="已核验" Criteria="!ISCURRENTUSERINROLE('Administrators')" TargetItems="已核验" Enabled="False" IsNewNode="True" />
+      </AppearanceRules>
+      <OwnMembers>
+        <Member Name="部门s" Caption="使用系统的部门" />
+        <Member Name="功能简介" RowCount="4" />
+        <Member Name="购买金额" EditMask="N2" DisplayFormat="{0:N2}" />
+        <Member Name="管理员用户" NullText="客户端登陆系统的最高权限用户" />
+        <Member Name="链接" NullText="B/S架构系统填写，如：http://192.192.188.41/main.html" RowCount="1" />
+        <Member Name="维保金额" DisplayFormat="{0:N2}" EditMask="N2" />
+        <Member Name="系统名称" DataSourceCriteria="[公司.登陆名称] = ToStr(CURRENTUSERID()) Or ISCURRENTUSERINROLE('Administrators') Or ISCURRENTUSERINROLE('Viewer')" />
+      </OwnMembers>
+    </Class>
+    <Class Name="SystemManager.Module.BusinessObjects.ora55.巡检">
+      <AppearanceRules>
+        <AppearanceRule Id="信息中心已核验" Criteria="!ISCURRENTUSERINROLE('Administrators') And !ISCURRENTUSERINROLE('Viewer')" TargetItems="信息中心已核验" Enabled="False" IsNewNode="True" />
+      </AppearanceRules>
+      <OwnMembers>
+        <Member Name="巡检人" DataSourceCriteria="[公司.登陆名称] = ToStr(CURRENTUSERID())" />
+        <Member Name="巡检时间" DisplayFormat="{0:G}" EditMask="G" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Options LookupSmallCollectionItemCount="200" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="部门_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="系统s_Group" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="部门_LookupListView" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="-1" SortIndex="0" SortOrder="Ascending" IsNewNode="True" />
+        <ColumnInfo Id="名称" SortIndex="-1" SortOrder="None" />
+      </Columns>
+    </ListView>
+    <DetailView Id="厂商员工_DetailView">
+      <Items>
+        <PropertyEditor Id="职位" NullText="如：开发、销售、产品等" />
+      </Items>
+    </DetailView>
+    <ListView Id="厂商员工_LookupListView" AllowNew="False" />
+    <DetailView Id="服务器_DetailView">
+      <Items>
+        <PropertyEditor Id="操作系统" NullText="如：Windows Server 2016" />
+        <PropertyEditor Id="服务器进程名" NullText="如：server.exe或w3wp.exe（IIS）" />
+        <PropertyEditor Id="服务器名" NullText="如：负载均衡服务器、应用服务器、数据库服务器" />
+        <PropertyEditor Id="服务器用户名" NullText="登陆服务器的管理员用户名" />
+        <PropertyEditor Id="上级服务器" NullText="按数据流顺序填写，如负载均衡的上级是应用服务器，应用服务器上级是数据库服务器" />
+        <PropertyEditor Id="数据库密码" NullText="如果是数据库服务器就填写" />
+        <PropertyEditor Id="数据库名" NullText="如果是数据库服务器就填写，如Oracle 10g" />
+        <PropertyEditor Id="数据库用户名" NullText="如果是数据库服务器就填写" />
+        <PropertyEditor Id="资源增量2024" RowCount="10" NullText="如存储需要增加10G，内存需要增加1G。简要说明增加原因。" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <TabbedGroup Id="Item1" CaptionLocation="Top" Index="0" RelativeSize="54.43959243085881" IsNewNode="True">
+              <LayoutGroup Id="服务器" ShowCaption="True" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="服务器_col1" ShowCaption="False" Index="0" RelativeSize="90.41916167664671" IsNewNode="True">
+                  <LayoutItem Id="IP地址" ViewItem="IP地址" Index="0" RelativeSize="10.596026490066226" IsNewNode="True" />
+                  <LayoutItem Id="服务器名" ViewItem="服务器名" Index="1" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="服务器用户名" ViewItem="服务器用户名" Index="2" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="服务器密码" ViewItem="服务器密码" Index="3" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="服务器进程名" ViewItem="服务器进程名" Index="4" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="服务器进程端口" ViewItem="服务器进程端口" Index="5" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="操作系统" ViewItem="操作系统" Index="6" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="上级服务器" ViewItem="上级服务器" Index="7" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="数据库名" ViewItem="数据库名" Index="8" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="数据库用户名" ViewItem="数据库用户名" Index="9" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="数据库密码" ViewItem="数据库密码" Index="10" RelativeSize="7.947019867549669" IsNewNode="True" />
+                  <LayoutItem Id="Oid" ViewItem="Oid" Index="11" RelativeSize="9.933774834437086" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="说明" ViewItem="说明" Index="1" RelativeSize="9.580838323353293" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" RelativeSize="100" Caption="资源增量" IsNewNode="True">
+                <LayoutItem Id="资源增量2024" ViewItem="资源增量2024" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="45.56040756914119" Caption="Oid" Index="1">
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="服务器" RelativeSize="46.25267665952891" Direction="Vertical" Removed="True">
+              <LayoutGroup Id="服务器_col1" ShowCaption="False" Index="0" RelativeSize="90.3061224489796" IsNewNode="True" Removed="True">
+                <LayoutItem Id="IP地址" ViewItem="IP地址" Index="0" RelativeSize="10.734463276836157" IsNewNode="True" />
+                <LayoutItem Id="服务器名" ViewItem="服务器名" Index="1" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="服务器用户名" ViewItem="服务器用户名" Index="2" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="服务器密码" ViewItem="服务器密码" Index="3" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="服务器进程名" ViewItem="服务器进程名" Index="4" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="服务器进程端口" ViewItem="服务器进程端口" Index="5" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="操作系统" ViewItem="操作系统" Index="6" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="上级服务器" ViewItem="上级服务器" Index="7" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="数据库名" ViewItem="数据库名" Index="8" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="数据库用户名" ViewItem="数据库用户名" Index="9" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="数据库密码" ViewItem="数据库密码" Index="10" RelativeSize="7.909604519774011" IsNewNode="True" />
+                <LayoutItem Id="Oid" ViewItem="Oid" Index="11" RelativeSize="10.169491525423728" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="说明" ViewItem="说明" Index="1" RelativeSize="9.693877551020408" IsNewNode="True" />
+              <LayoutGroup Id="服务器_col2" RelativeSize="50.055493895671475" Caption="服务器_col2" Removed="True">
+                <LayoutItem Id="上级服务器" Index="0" RelativeSize="15.384615384615385" Removed="True" />
+                <LayoutItem Id="数据库名" Index="0" RelativeSize="17.391304347826086" Removed="True" />
+                <LayoutItem Id="说明" Index="0" RelativeSize="12.5" Removed="True" />
+                <LayoutItem Id="物理位置" Index="0" RelativeSize="13.793103448275861" Removed="True" />
+                <LayoutItem Id="Oid" ViewItem="Oid" Index="0" RelativeSize="100" IsNewNode="True" />
+                <LayoutItem Id="操作系统" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="系统s_Group" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="服务器_ListView">
+      <Columns>
+        <ColumnInfo Id="上级服务器" Index="-1" />
+        <ColumnInfo Id="说明" Index="-1" />
+        <ColumnInfo Id="DefaultSys" Index="-1" Width="129" />
+        <ColumnInfo Id="IP地址" Width="94" />
+        <ColumnInfo Id="DefaultSys.公司.简称" PropertyName="DefaultSys.公司.简称" Index="1" Width="96" IsNewNode="True" />
+        <ColumnInfo Id="DefaultSys.系统名称" PropertyName="DefaultSys.系统名称" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="服务器名" Index="3" />
+        <ColumnInfo Id="服务器用户名" Index="4" />
+        <ColumnInfo Id="服务器密码" Index="5" />
+        <ColumnInfo Id="服务器进程名" Index="6" />
+        <ColumnInfo Id="服务器进程端口" Index="7" />
+        <ColumnInfo Id="操作系统" Index="8" />
+        <ColumnInfo Id="数据库名" Index="9" />
+        <ColumnInfo Id="数据库用户名" Index="10" />
+        <ColumnInfo Id="数据库密码" Index="11" />
+      </Columns>
+    </ListView>
+    <ListView Id="服务器_LookupListView" AllowNew="False" Criteria="[系统s][[公司.登陆名称] = ToStr(CURRENTUSERID())]" />
+    <DetailView Id="公司_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22.318125770653513">
+            <LayoutGroup Id="公司" RelativeSize="80.11049723756906">
+              <LayoutGroup Id="公司_col1" RelativeSize="49.866190900981266">
+                <LayoutItem Id="登陆用户" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="简称" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="全称" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="总部所在城市" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+              <LayoutGroup Id="公司_col2" Caption="公司_col2" RelativeSize="50.133809099018734">
+                <LayoutItem Id="核验人" Index="0" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="已核验" Index="1" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="注册资本" Index="2" RelativeSize="50" />
+                <LayoutItem Id="登陆名称" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="19.88950276243094">
+              <LayoutItem Id="Oid" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="厂商员工s_Group" Index="1" ShowCaption="True" RelativeSize="22.934648581997536" IsNewNode="True" Removed="True">
+            <LayoutItem Id="厂商员工s" ViewItem="厂商员工s" ShowCaption="" RelativeSize="100" Index="0" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Index="2" ShowCaption="False" RelativeSize="54.747225647348955" IsNewNode="True" Removed="True">
+            <LayoutItem Id="数据治理大会2023问题" ViewItem="数据治理大会2023问题" ShowCaption="False" Index="0" RelativeSize="45.945945945945944" IsNewNode="True" />
+            <LayoutItem Id="数据治理大会2023案例" ViewItem="数据治理大会2023案例" ShowCaption="False" Index="1" RelativeSize="54.054054054054056" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="公司_ListView" Criteria="[登陆名称] = ToStr(CURRENTUSERID()) Or ISCURRENTUSERINROLE('Administrators') Or ISCURRENTUSERINROLE('Viewer')">
+      <Columns>
+        <ColumnInfo Id="登陆名称" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="公司_LookupListView" AllowNew="False" />
+    <DetailView Id="审计2023_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="审计2023" RelativeSize="50">
+              <LayoutGroup Id="审计2023_col1" RelativeSize="100">
+                <LayoutItem Id="A" RelativeSize="7.547169811320755" />
+                <LayoutItem Id="B" RelativeSize="5.660377358490566" />
+                <LayoutItem Id="C" RelativeSize="5.660377358490566" />
+                <LayoutItem Id="D" RelativeSize="7.547169811320755" />
+                <LayoutItem Id="E" RelativeSize="5.660377358490566" />
+                <LayoutItem Id="F" RelativeSize="5.660377358490566" />
+                <LayoutItem Id="G" RelativeSize="5.660377358490566" />
+                <LayoutItem Id="H" RelativeSize="5.660377358490566" />
+                <LayoutItem Id="I" ViewItem="I" Index="8" RelativeSize="5.660377358490566" IsNewNode="True" />
+                <LayoutItem Id="J" ViewItem="J" Index="9" RelativeSize="5.660377358490566" IsNewNode="True" />
+                <LayoutItem Id="K" ViewItem="K" Index="10" RelativeSize="5.660377358490566" IsNewNode="True" />
+                <LayoutItem Id="L" ViewItem="L" Index="11" RelativeSize="7.547169811320755" IsNewNode="True" />
+                <LayoutItem Id="M" ViewItem="M" Index="12" RelativeSize="7.547169811320755" IsNewNode="True" />
+                <LayoutItem Id="N" ViewItem="N" Index="13" RelativeSize="5.660377358490566" IsNewNode="True" />
+                <LayoutItem Id="O" ViewItem="O" Index="14" RelativeSize="5.660377358490566" IsNewNode="True" />
+                <LayoutItem Id="P" ViewItem="P" Index="15" RelativeSize="7.547169811320755" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="审计2023_col2" RelativeSize="50.043898156277436" Caption="审计2023_col2" Removed="True">
+                <LayoutItem Id="J" Index="0" RelativeSize="13.333333333333334" Removed="True" />
+                <LayoutItem Id="K" Index="0" RelativeSize="12.121212121212121" Removed="True" />
+                <LayoutItem Id="L" Index="0" RelativeSize="13.88888888888889" Removed="True" />
+                <LayoutItem Id="M" Index="0" RelativeSize="12.5" Removed="True" />
+                <LayoutItem Id="N" Index="0" RelativeSize="9.090909090909092" Removed="True" />
+                <LayoutItem Id="O" Index="0" RelativeSize="8.51063829787234" Removed="True" />
+                <LayoutItem Id="P" Index="0" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="I" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="43.6498150431566">
+              <LayoutItem Id="Oid" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="审计2023_ListView" Criteria="[系统.公司.登陆名称] = ToStr(CURRENTUSERID()) Or ISCURRENTUSERINROLE('Administrators') Or ISCURRENTUSERINROLE('Viewer')">
+      <Columns>
+        <ColumnInfo Id="系统.公司.简称" PropertyName="系统.公司.简称" Index="0" Width="100" IsNewNode="True" />
+        <ColumnInfo Id="系统" Index="1" Width="186" />
+        <ColumnInfo Id="I" PropertyName="I" Index="2" IsNewNode="True" Removed="True" />
+        <ColumnInfo Id="F" PropertyName="F" Index="3" IsNewNode="True" Removed="True" />
+        <ColumnInfo Id="H" PropertyName="H" Index="4" IsNewNode="True" Removed="True" />
+        <ColumnInfo Id="A" Removed="True" />
+        <ColumnInfo Id="B" Removed="True" />
+        <ColumnInfo Id="C" Removed="True" />
+        <ColumnInfo Id="D" Removed="True" />
+        <ColumnInfo Id="E" Removed="True" />
+        <ColumnInfo Id="G" Removed="True" />
+        <ColumnInfo Id="J" Removed="True" />
+        <ColumnInfo Id="K" Removed="True" />
+        <ColumnInfo Id="L" Removed="True" />
+        <ColumnInfo Id="M" Removed="True" />
+        <ColumnInfo Id="N" Removed="True" />
+        <ColumnInfo Id="O" Removed="True" />
+        <ColumnInfo Id="P" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="系统_部门s_ListView" AllowNew="False" AllowLink="True" />
+    <ListView Id="系统_服务器s_ListView" AllowLink="False" AllowUnlink="False">
+      <Columns>
+        <ColumnInfo Id="服务器进程端口" Index="-1" />
+        <ColumnInfo Id="服务器进程名" Index="-1" />
+        <ColumnInfo Id="服务器密码" Index="-1" />
+        <ColumnInfo Id="服务器用户名" Index="-1" />
+        <ColumnInfo Id="说明" Index="-1" />
+        <ColumnInfo Id="DefaultSys" Index="-1" />
+        <ColumnInfo Id="IP地址" Width="269" />
+        <ColumnInfo Id="服务器名" Index="1" />
+        <ColumnInfo Id="操作系统" Index="2" />
+        <ColumnInfo Id="数据库名" Index="3" />
+        <ColumnInfo Id="数据库用户名" Index="4" />
+        <ColumnInfo Id="数据库密码" Index="5" />
+        <ColumnInfo Id="上级服务器" Index="6" />
+        <ColumnInfo Id="资源增量2024" Index="7" Width="159" RowCount="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="系统_系统付费s_ListView">
+      <Columns>
+        <ColumnInfo Id="项目名称" Index="0" />
+        <ColumnInfo Id="备注" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="系统_巡检s_ListView">
+      <Columns>
+        <ColumnInfo Id="巡检时间" Width="140" />
+        <ColumnInfo Id="巡检人" Width="100" />
+        <ColumnInfo Id="信息中心已核验" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="系统_DetailView">
+      <Items>
+        <StaticText Id="@97f5e0aa-9d99-4816-90be-9903f267b860" Text="实现了对接东软的单点登录系统的勾选" Caption="@97f5e0aa-9d99-4816-90be-9903f267b860(29)" IsNewNode="True" />
+        <PropertyEditor Id="管理员用户" NullText="客户端登陆系统最高权限用户" />
+        <PropertyEditor Id="客户端进程名" NullText="C/S类如clienthost.exe，B/S类如chrome.exe" />
+        <PropertyEditor Id="系统名称" NullText="如：手术麻醉管理系统" />
+        <PropertyEditor Id="信息中心对接人" NullText="项目负责人或熟悉项目的工程师。没有则不填" />
+        <PropertyEditor Id="巡检s" DataSourceCriteria="[巡检时间] &gt; AddDays(Today(), -90)" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="38.92617449664429">
+            <LayoutGroup Id="系统" RelativeSize="100">
+              <LayoutGroup Id="系统_col1" RelativeSize="49.87146529562982">
+                <LayoutItem Id="系统名称" RelativeSize="12.598425196850394" />
+                <LayoutItem Id="信息中心对接人" RelativeSize="9.448818897637794" />
+                <LayoutItem Id="公司" RelativeSize="9.448818897637794" />
+                <LayoutItem Id="上线时间" RelativeSize="9.448818897637794" />
+                <LayoutItem Id="功能简介" RelativeSize="27.559055118110237" />
+                <LayoutItem Id="管理员用户" RelativeSize="9.448818897637794" />
+                <LayoutItem Id="管理员密码" RelativeSize="9.448818897637794" />
+                <LayoutItem Id="客户端进程名" RelativeSize="12.598425196850394" />
+                <LayoutItem Id="是否有合同" RelativeSize="11.510791366906474" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="系统_col2" RelativeSize="50.12853470437018">
+                <LayoutItem Id="是否有合同" ViewItem="是否有合同" Index="0" RelativeSize="12.598425196850394" IsNewNode="True" />
+                <LayoutItem Id="维保金额" RelativeSize="9.448818897637794" Index="2" />
+                <LayoutItem Id="合同已过期" RelativeSize="9.448818897637794" Index="3" />
+                <LayoutItem Id="实现单点登录" RelativeSize="9.448818897637794" Index="4" />
+                <LayoutItem Id="@97f5e0aa-9d99-4816-90be-9903f267b860" ViewItem="@97f5e0aa-9d99-4816-90be-9903f267b860" Index="5" RelativeSize="7.086614173228346" IsNewNode="True" />
+                <LayoutItem Id="类型1" Index="6" RelativeSize="9.448818897637794" />
+                <LayoutItem Id="核验人" Index="7" RelativeSize="9.448818897637794" Removed="True" />
+                <LayoutItem Id="巡检间隔天数" Index="7" RelativeSize="9.448818897637794" />
+                <LayoutItem Id="已核验" Index="7" RelativeSize="8.633093525179856" Removed="True" />
+                <LayoutItem Id="Oid" ViewItem="Oid" Index="8" RelativeSize="23.62204724409449" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="12.040133779264215" Caption="Oid" Removed="True">
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="11.677852348993289">
+            <LayoutItem Id="链接" RelativeSize="31.03448275862069" />
+            <LayoutItem Id="备注" RelativeSize="68.96551724137932" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="16.107382550335572" Caption="系统巡检" Direction="Horizontal" IsNewNode="True">
+            <LayoutItem Id="巡检s" ViewItem="巡检s" Index="0" RelativeSize="30" IsNewNode="True" />
+            <LayoutItem Id="系统付费s" ViewItem="系统付费s" RelativeSize="70" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="服务器s" ShowCaption="True" Index="3" RelativeSize="16.107382550335572" IsNewNode="True">
+            <LayoutItem Id="服务器s" ViewItem="服务器s" Index="0" RelativeSize="100" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="部门s" ShowCaption="True" Caption="使用系统的部门" Index="4" RelativeSize="17.181208053691275" IsNewNode="True">
+            <LayoutItem Id="部门s" ViewItem="部门s" Index="0" RelativeSize="100" IsNewNode="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="33.04562268803946" Removed="True">
+            <LayoutGroup Id="部门s" RelativeSize="100">
+              <LayoutItem Id="部门s" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="服务器s" RelativeSize="100">
+              <LayoutItem Id="服务器s" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="系统_ListView" Criteria="[公司.登陆名称] = ToStr(CURRENTUSERID()) Or ISCURRENTUSERINROLE('Administrators') Or ISCURRENTUSERINROLE('Viewer')">
+      <Columns>
+        <ColumnInfo Id="公司.简称" PropertyName="公司.简称" Index="-1" Width="72" IsNewNode="True" />
+        <ColumnInfo Id="功能简介" Index="-1" />
+        <ColumnInfo Id="购买金额" Index="-1" />
+        <ColumnInfo Id="管理员密码" Index="-1" />
+        <ColumnInfo Id="管理员用户" Index="-1" />
+        <ColumnInfo Id="合同已过期" Index="-1" />
+        <ColumnInfo Id="客户端进程名" Index="-1" />
+        <ColumnInfo Id="上线时间" Index="-1" />
+        <ColumnInfo Id="实现单点登录" Index="-1" />
+        <ColumnInfo Id="是否有合同" Index="-1" />
+        <ColumnInfo Id="维保金额" Index="-1" />
+        <ColumnInfo Id="公司" Index="2" />
+        <ColumnInfo Id="类型1" Index="3" />
+        <ColumnInfo Id="核验人" Index="4" />
+        <ColumnInfo Id="已核验" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="职工_LookupListView" AllowNew="False" />
+  </Views>
+</Application>
