@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="GanBao">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User">
+      <OwnMembers>
+        <Member Name="UserName" Caption="工号" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems StartupNavigationItem="GanBaoEvent_ListView" />
+  <Options LookupSmallCollectionItemCount="50">
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="用户" />
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items>
+        <StaticImage Id="LogonImage" ImageName="Actions_DeleteCircled" />
+        <StaticText Id="LogonText" Text="欢迎使用干保系统" />
+        <PropertyEditor Id="Password" Caption="密码" />
+        <PropertyEditor Id="UserName" Caption="用户名" />
+      </Items>
+    </DetailView>
+    <DetailView Id="GanBaoEvent_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="EventBase" Index="0" RelativeSize="24.411134903640257" Caption="任务">
+              <LayoutGroup Id="EventBase_col1" RelativeSize="50">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" RelativeSize="20.21276595744681" IsNewNode="True" />
+                <LayoutItem Id="Operator2" Index="0" RelativeSize="19.565217391304348" Removed="True" />
+                <LayoutItem Id="Operator3" Index="1" RelativeSize="15.217391304347826" Removed="True" />
+                <LayoutItem Id="WorkType" ViewItem="WorkType" Index="1" RelativeSize="14.893617021276595" IsNewNode="True" />
+                <LayoutItem Id="Department" ViewItem="Department" Index="2" RelativeSize="14.893617021276595" IsNewNode="True" />
+                <LayoutItem Id="BeginTime" Index="3" RelativeSize="14.893617021276595" />
+                <LayoutItem Id="EndTime" Index="4" RelativeSize="14.893617021276595" />
+                <LayoutItem Id="Address" Index="5" RelativeSize="20.21276595744681" />
+                <LayoutItem Id="Operator1" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="EventBase_col2" RelativeSize="50">
+                <LayoutItem Id="Operator1" ViewItem="Operator1" Index="0" RelativeSize="20.21276595744681" IsNewNode="True" />
+                <LayoutItem Id="Operator2" ViewItem="Operator2" Index="1" RelativeSize="14.893617021276595" IsNewNode="True" />
+                <LayoutItem Id="Name" Index="2" RelativeSize="13.20754716981132" Removed="True" />
+                <LayoutItem Id="Operator3" ViewItem="Operator3" Index="2" RelativeSize="14.893617021276595" IsNewNode="True" />
+                <LayoutItem Id="Department" Index="3" RelativeSize="15.217391304347826" Removed="True" />
+                <LayoutItem Id="OperatorType" Index="3" RelativeSize="14.893617021276595" />
+                <LayoutItem Id="WorkType" Index="3" RelativeSize="13.20754716981132" Removed="True" />
+                <LayoutItem Id="Remark" Index="4" RelativeSize="35.1063829787234" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Index="1" RelativeSize="75.58886509635974">
+              <LayoutItem Id="Oid" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

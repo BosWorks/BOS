@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8bd554d7-4c06-4024-823f-3a659a88297c" namespace="GanBao.Module.BusinessObjects.ganbaodb" dataBaseShemaInfo="H4sIAAAAAAAEAOWZWW/bOBDH3wv0Oxh5Dm2KNwvHRXNs0T26RZtudx+H5DARakuBJOf49jtKnMNJemzXsR/qB8McDiP+yOHMn8r45flsOjjFpi3ramerGPKtl5Pnz8a70OKHrm7gCN9UuR6QV9W+OG/TztZx1528GI3Ozs6GZ3JYN0cjwXkx+vuP3z/EY5zB1o1z+W1nVlZtB1XELXrqYDA+hDDFtn/kZfvacsdwbXoLM5wcnGLV9XMdj26NN34HVW+bdM2c+heNm879su0NH08SdDjJMO3/yLLxxvf1vExv0iQp7rQImnGRFVNSCuZ9jixknkJEacGr8WjhfDN4r57OZ1W7hPBFM3X0DFedk108KqvDckYzu2Nd8v4a43/lvMsaXQCtUDDgVjAVZWA+SM90LpI0Dn2y+gErDR/9D9yDKm0GNoeM2nrPBG0xU8poBtkbprUBFaLEZOKqYV+l1GDbrh/WRoE5R828jYYpnSIDKBSTIAJi9trLsGrY/uf6SYVDCTk45jVaOq9CMVCgmZVcJPSyQLHyGP5UN58PL042QFtoBVF7ZGAhM1W4xJyhrxB1TKaQ2YNZNe0+nkDTzSgJbyCOPYBHpVnWBcVxFIIFJ5BZdN7p7Cic5ap5/zzBBqgsFt/EXWCskJcvPuyRr+vPU/GKn4x3MydYk7qwSXNGkesoM/fSIgXBsvJJGUFHmD9ZRMufZIffk+hsPq9/b0OQJiuRaW8pRSuvA3MZM0MTs1KKF96472Z9zLpQwN8tnW8L1RqUM8hsCJGzlJNnKoREmoNSt6dI94hBROe/qpwHox/E3C9jR1cbaC7WAiqMClBwyxLwgilHCouKFCFz7ZBLmyOklV4RNqOs0HuqstowkwQJZiq1LATwDIWxXkfrkswrz1RNwmYDqIZ20kTPrI7AlHD9jjpkHrQEQ5oqPbKjq0B9k34O2L06bSCCLeqsFUUw0kmluwEYUsvKsyIUtAaK7vUoVk36rqz+Kav1s1KJceC1Yxpin4qEYy4ExYK0WugCvFfFWmvP3WvDGpKys1nlgmpvERTdFGR/M8oqMqtS4imh0/ZhtlpJ9VnWk2tALQLd4HlOTORIYa1plx0PlKctSmOlScbap0F9DdUu1Jcv5NazqcoEI7gjUhdIUihOQS0z04WLoEEXsk8rT0H6a/kJy/WBpkwKMXjNlIXUSwrNoBCJFRo4R80lXfB/DHTRvj3J4/6VL6Z3TR3vjhz/dfV+mM7t6cH5Sf/aargPHQxPhRiK7cGie6dvDdWQbw/25tNu3uBOhfOugen24N08TMv4G14c1p+x2gnOpcJqlSwhKA/j0fUjLp+3N4W2xbZf1/fzm+Ubv0o0Nczl+S0RmT7M85KJFH59ivcdr6z3ffegxcnHKh5DdYRU2S7bV0vz2BzGtDJ0ortyw3P7wjTGr7Hq8w0Vl1mfXNtFED4wLznvY1se0c9fSgqFeyOW+y6H7eMUO3zVtnUsoZfW12Me6bgc8HY+nfZhtovHcFrWDUVRBooPqoP3e54/G4/u/edh8i+syGtGohgAAA==" generateConnectionHelper="true" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" connectionStringName="ConnectionString" createdInVersion="22.2.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="true" lastModifiedInVersion="22.2.4.0" name="ganbaodb" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="8e3b3e37-c5ba-461f-b4e1-75cd8cd3bd28">
+      <xpObject Id="d40852b5-02f4-4332-99fc-bf0dbce37a94" name="EventBase" baseClass="XPObject" userFileName="EventBase" designerFileName="EventBase.Designer" className="EventBase" virtualName="EventBase" customAttributes="BosCap(&quot;任务&quot;)">
+        <fields>
+          <generalXpObjectHasFields Id="4b949da9-c6d2-4add-8aca-79d5b5fab491">
+            <field Id="c8ba54e2-a072-4c3b-9b39-5f1d368e9d75" name="BeginTime" columnType="DateTime" displayName="开始时间" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bc89cb44-5291-4162-bdce-38fd2b74a832">
+            <field Id="fbfe5799-2d40-4465-af96-556a4bc3ed6c" name="EndTime" columnType="DateTime" displayName="结束时间" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3a8af171-2e7b-435d-8279-16b3ee5c7ec6">
+            <field Id="7c2effc5-97c6-45dc-aa14-3a2beef9593b" name="Address" displayName="地址" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bbdf3faf-abb2-4f53-a068-8b8c8bcd48f0">
+            <field Id="28e3afb8-95e7-4324-a4a5-7302de931e25" name="Name" displayName="保健对象卡号/姓名" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8677f312-61b2-44c4-b21b-3ae0f5e7960a">
+            <field Id="154ac59e-a7af-418d-868d-bc5cd613f9a6" name="WorkType" virtualColumnType="WorkType" logicalType="WorkType" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="de751d8b-35ac-4daa-8ea9-dde86148f66b">
+            <field Id="79aa9e45-f516-4c22-b82e-7e8985f8a2b3" name="Department" virtualColumnType="Department" logicalType="Department" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="72786a7e-a356-43ad-b227-b2920add8872">
+            <field Id="58527d50-2b38-45fc-bdb2-f49d46213f03" name="OperatorType" displayName="人员类别" virtualColumnType="OperatorType" logicalType="OperatorType" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ac979a2c-a944-49f7-b8dc-9071f78d997e">
+            <field Id="bb36f42f-2b9e-495b-8fef-e6cf44401968" name="Remark" displayName="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="c7d1f5b1-cf0c-4fe7-a817-e3d430e2a9f6">
+      <xpObject Id="a3f60190-dfd9-4bbd-aa45-92b39eeb2c89" name="WorkType" baseClass="Dictionary" userFileName="WorkType" designerFileName="WorkType.Designer" className="WorkType" virtualBaseClass="Dictionary" mapInheritance="ParentTable" virtualName="WorkType" customAttributes="BosCap(&quot;工作类别&quot;)">
+        <superClass>
+          <inheritance Id="a832ea08-13d7-4f59-b971-9701050855f4">
+            <xpObjectMoniker Id="264ba107-da01-48c6-a9e9-4058e037fcad" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="b6203d00-4bab-44e9-92cc-830fccfdeba7">
+      <xpObject Id="264ba107-da01-48c6-a9e9-4058e037fcad" name="Dictionary" baseClass="XPObject" userFileName="Dictionary" designerFileName="Dictionary.Designer" className="Dictionary" virtualName="Dictionary">
+        <fields>
+          <generalXpObjectHasFields Id="649df988-dd02-4621-b512-fe434de4df8a">
+            <field Id="7e5f5456-eda0-43a6-8649-1b16a0499fe2" name="Code" displayName="编码" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="20" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b777cee6-e966-4d8b-9805-b53631fc727f">
+            <field Id="e99e8956-6d20-4a2b-bba9-e26795c78d3f" name="Name" displayName="名称" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7bb6b0db-c260-4830-912f-762c79974f06">
+            <field Id="e6a016c9-75ca-4286-a98e-9a53a69a6dad" name="OrderId" columnType="Int32" displayName="顺序" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6aaeb61b-4308-4596-9c78-a606e56d1cfd">
+            <field Id="6cf8a958-5ac9-4028-8bb4-b375251a9941" name="PinYin" displayName="拼音首字母" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="80" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="85e5b215-357c-4504-9963-56709e2292ad">
+      <xpObject Id="87f4f12f-1b46-438d-8f4c-74dd0dde857f" name="Department" baseClass="Dictionary" userFileName="Department" designerFileName="Department.Designer" className="Department" virtualBaseClass="Dictionary" mapInheritance="ParentTable" virtualName="Department" customAttributes="BosCap(&quot;部门&quot;)">
+        <superClass>
+          <inheritance Id="a226bdbb-e67e-495a-89a2-ff2cf41f9070">
+            <xpObjectMoniker Id="264ba107-da01-48c6-a9e9-4058e037fcad" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="69224ee8-5b85-49eb-8ddc-6f7b6c82d828">
+      <xpObject Id="1bef90fd-2fc0-45b4-80b6-67e36736d677" name="OperatorType" baseClass="Dictionary" userFileName="OperatorType" designerFileName="OperatorType.Designer" className="OperatorType" virtualBaseClass="Dictionary" mapInheritance="ParentTable" virtualName="OperatorType" customAttributes="BosCap(&quot;人员类别&quot;)">
+        <superClass>
+          <inheritance Id="97b512eb-3f3f-4db4-a9cc-e2e527a3ae75">
+            <xpObjectMoniker Id="264ba107-da01-48c6-a9e9-4058e037fcad" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="5b730cb3-d383-41c2-8c66-b3935eed0393">
+      <xpObject Id="846b6208-2f8b-4b40-8b3f-518ca5a513de" name="GanBaoEvent" baseClass="EventBase" userFileName="GanBaoEvent" designerFileName="GanBaoEvent.Designer" className="GanBaoEvent" virtualBaseClass="EventBase" mapInheritance="ParentTable" virtualName="GanBaoEvent" customAttributes="BosCap(&quot;干保任务&quot;)">
+        <superClass>
+          <inheritance Id="31d86d33-66cd-4933-9e51-33f22759e2b8">
+            <xpObjectMoniker Id="d40852b5-02f4-4332-99fc-bf0dbce37a94" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e258e8ec-cd5b-428f-8c66-08a56aad7868">
+      <xpObject Id="dfcf4b95-47ad-48c5-a12d-15a00e503bc5" name="JiWeiEvent" baseClass="EventBase" userFileName="JiWeiEvent" designerFileName="JiWeiEvent.Designer" className="JiWeiEvent" virtualBaseClass="EventBase" mapInheritance="ParentTable" virtualName="JiWeiEvent">
+        <superClass>
+          <inheritance Id="71decc0a-718f-4e39-99b6-979b9ed2e456">
+            <xpObjectMoniker Id="d40852b5-02f4-4332-99fc-bf0dbce37a94" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>
